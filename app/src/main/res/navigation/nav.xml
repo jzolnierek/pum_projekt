@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav"
+    app:startDestination="@id/allListsFragment">
+
+    <fragment
+        android:id="@+id/allListsFragment"
+        android:name="pl.edu.uwr.pum.projekt.AllListsFragment"
+        android:label="AllListsFragment" >
+        <action
+            android:id="@+id/action_allListsFragment_to_shoppingListFragment"
+            app:destination="@id/shoppingListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingListFragment"
+        android:name="pl.edu.uwr.pum.projekt.ShoppingListFragment"
+        android:label="ShoppingListFragment" >
+        <argument
+            android:name="listId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
